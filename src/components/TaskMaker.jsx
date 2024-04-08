@@ -1,8 +1,9 @@
 import { useState } from "react"
 import moment from "moment"
+import { useTask } from "../contexts/TaskContext"
 
 export const TaskMaker = () => {
-	// const { taskList, addTask } = useTask()
+	const { taskList, addTask } = useTask()
 	const [newTask, setNewTask] = useState({
 		task: "",
 		status: false,
