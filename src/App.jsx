@@ -1,3 +1,9 @@
+import { TaskMaker } from "./components/TaskMaker.jsx"
+
 export const App = () => {
-  return <div>Find me in App.jsx!</div>;
-};
+	return (
+		<>
+			<TaskMaker />
+		</>
+	)
+}
