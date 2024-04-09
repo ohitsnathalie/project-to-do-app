@@ -1,30 +1,34 @@
-import { createContext, useState, useContext } from "react"
-import moment from "moment"
+import React, { createContext, useState, useContext } from 'react';
+import moment from 'moment';
 
-const TaskListContext = createContext()
-const TaskListData = [
-	{
-		task: "Make a todolist app",
-		status: false,
-		created: moment().format("MMMM Do YYYY, h:mm:ss a"), //this is right now
-		deadline: moment().add(5, "days").calendar(), // this 24 h from now
-		topic: "Web development",
-		project: "Technigo",
-		importance: 1,
-		visible: true,
-	},
-]
+const TaskListContext = createContext();
 
-export const TaskListProvider = ({ children }) => {
-	const [newTask, setNewTask] = useState([TaskListData])
+const TaskListProvider = ({ children }) => {
+  const [taskList, setTaskList] = useState([
+    {
+      task: "Make a todolist app",
+      status: false,
+      created: moment().format("MMMM Do YYYY, h:mm:ss a"),
+      deadline: moment().add(5, "days").calendar(),
+      topic: "Web development",
+      project: "Technigo",
+      importance: 1,
+      visible: true,
+    },
+  ]);
 
-	//remember to add ID!
+  const addTask = (newTask) => {
+    setTaskList([...taskList, newTask]);
+    console.log(taskList);
+  };
 
-	return (
-		<TaskListContext.Provider value={{ newTask, setNewTask }}>
-			{children}
-		</TaskListContext.Provider>
-	)
-}
+  return (
+    <TaskListContext.Provider value={{ taskList, addTask }}>
+      {children}
+    </TaskListContext.Provider>
+  );
+};
+
+export { TaskListContext, TaskListProvider };
 
 export const useTask = () => useContext(TaskListContext)
