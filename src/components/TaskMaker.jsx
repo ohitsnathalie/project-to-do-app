@@ -7,6 +7,7 @@ export const TaskMaker = () => {
   console.log(taskList)
 
 	const [newTask, setNewTask] = useState({
+    id: Math.floor(Math.random() * 10000000000000),
 		task: "",
 		status: false,
 		created: moment().format("MMMM Do YYYY, h:mm:ss a"), //this is right now
@@ -31,6 +32,7 @@ export const TaskMaker = () => {
 		if (newTask.task) {
 			addTask(newTask)
 			setNewTask({
+        id: Math.floor(Math.random() * 10000000000000),
 				task: "",
 				status: false,
 				created: moment().format("MMMM Do YYYY, h:mm:ss a"), //this is right now
@@ -59,6 +61,33 @@ export const TaskMaker = () => {
 						onChange={handleChange}
 					/>
 				</label>
+        <label>
+					Add a topic for the task
+					<input
+						type='text'
+						name='topic'
+						value={newTask.topic}
+						onChange={handleChange}
+					/>
+				</label>
+        <label>
+					Add a Project for the task
+					<input
+						type='text'
+						name='project'
+						value={newTask.project}
+						onChange={handleChange}
+					/>
+				</label>
+        <label>
+					How important is this task?
+          <select name="importance" id="importance">
+    <option value="1">Critical!</option>
+    <option value="2">Important</option>
+    <option value="3">Nice to have done</option>
+    <option value="4">Not really important at all</option>
+  </select>
+  </label>
 				<button type='submit'>Add Task</button>
 			</form>
 		</>

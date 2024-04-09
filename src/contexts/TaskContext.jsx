@@ -6,6 +6,7 @@ const TaskListContext = createContext();
 const TaskListProvider = ({ children }) => {
   const [taskList, setTaskList] = useState([
     {
+      id: Math.floor(Math.random() * 10000000000000),
       task: "Make a todolist app",
       status: false,
       created: moment().format("MMMM Do YYYY, h:mm:ss a"),
