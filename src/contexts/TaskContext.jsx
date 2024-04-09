@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
 import moment from 'moment';
-
 const TaskListContext = createContext();
 
 const TaskListProvider = ({ children }) => {
@@ -23,13 +22,14 @@ const TaskListProvider = ({ children }) => {
     console.log(taskList);
   };
 
+
   return (
-    <TaskListContext.Provider value={{ taskList, addTask }}>
+    <TaskListContext.Provider value={{ taskList, addTask, setTaskList}}>
       {children}
     </TaskListContext.Provider>
   );
 };
 
-export { TaskListContext, TaskListProvider };
 
+export { TaskListContext, TaskListProvider };
 export const useTask = () => useContext(TaskListContext)

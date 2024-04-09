@@ -4,8 +4,7 @@ import { useTask } from "../contexts/TaskContext"
 
 export const TaskMaker = () => {
 	const { taskList, addTask } = useTask()
-  console.log(taskList)
-
+  //console.log(taskList)
 	const [newTask, setNewTask] = useState({
     id: Math.floor(Math.random() * 10000000000000),
 		task: "",
@@ -17,6 +16,7 @@ export const TaskMaker = () => {
 		importance: 2,
 		visible: true,
 	})
+
 
 
 	const handleChange = (event) => {
@@ -50,8 +50,11 @@ export const TaskMaker = () => {
   console.log(taskList)
 	return (
 		<>
-			<h1>Add a new task</h1>
+    <div className="taskwrapper">
+    <section className="taskmaker">
+			<h2>Add a new task</h2>
 			<form onSubmit={handleSubmit}>
+        <article>
 				<label>
 					Add new todo
 					<input
@@ -61,7 +64,9 @@ export const TaskMaker = () => {
 						onChange={handleChange}
 					/>
 				</label>
-        <label>
+        </article>
+
+        <article>        <label>
 					Add a topic for the task
 					<input
 						type='text'
@@ -70,6 +75,8 @@ export const TaskMaker = () => {
 						onChange={handleChange}
 					/>
 				</label>
+        </article>
+        <article>
         <label>
 					Add a Project for the task
 					<input
@@ -79,6 +86,8 @@ export const TaskMaker = () => {
 						onChange={handleChange}
 					/>
 				</label>
+        </article>
+        <article>
         <label>
 					How important is this task?
           <select name="importance" id="importance">
@@ -88,8 +97,11 @@ export const TaskMaker = () => {
     <option value="4">Not really important at all</option>
   </select>
   </label>
+  </article>
 				<button type='submit'>Add Task</button>
 			</form>
+      </section>
+      </div>
 		</>
 	)
 }
