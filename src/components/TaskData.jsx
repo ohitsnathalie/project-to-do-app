@@ -1,59 +1,48 @@
 import { updateLocale } from "moment/moment"
 import { useTask } from "../contexts/TaskContext"
 import { useState } from "react"
-
+import "./TaskData.css"
 
 export const TaskList = () => {
   const { taskList, newTask, setTaskList } = useTask()
 
-
-
   const handleCheckbox = (event) => {
     const updatedTaskList = taskList.map((task) => {
       if (task.id.toString() === event.target.id) {
-// if the task id is equal to the event target id, return the task with the status flipped
-        return { ...task, status: !task.status };
+        // if the task id is equal to the event target id, return the task with the status flipped
+        return { ...task, status: !task.status }
       }
-      return task;
-    });
+      return task
+    })
 
-    setTaskList(updatedTaskList);
-  };
+    setTaskList(updatedTaskList)
+  }
 
   const deleteTask = (event) => {
     const updatedTaskList = taskList.filter((task) => {
       // if the task id is not equal to the event target id, keep it in the list
-      return task.id.toString() !== event.target.id;
-    });
+      return task.id.toString() !== event.target.id
+    })
 
-    setTaskList(updatedTaskList);
-  };
-
-
-
-
+    setTaskList(updatedTaskList)
+  }
 
   return (
-    <section className="todo">
+    <section className='todo'>
       <h1>Task List ToDo</h1>
 
       {taskList.map((task, id) => (
-        <div className="reminder" key={task.id}>
+        <div
+          className='todo-item'
+          key={task.id}>
           <h2>{task.task}</h2>
           <input
-            type="checkbox"
+            type='checkbox'
             id={task.id}
-            name="status"
+            name='status'
             onChange={(event) => handleCheckbox(event)}
           />
-          <label htmlFor="status">Done</label>
-          <input
-            type="checkbox"
-            id={task.id}
-            name="visible"
-            onChange={(event) => deleteTask(event)}
-          />
-          <label htmlFor="visible">Delete task</label>
+          <label htmlFor='status'>Done</label>
 
           <p>Created: {task.created}</p>
           <p>Deadline: {task.deadline}</p>
@@ -61,6 +50,13 @@ export const TaskList = () => {
           <p>Project: {task.project}</p>
           <p>Importance: {task.importance}</p>
           <p>Status: {task.status ? "Completed" : "Not completed"}</p>
+          <input
+            type='button'
+            id={task.id}
+            name='visible'
+            value='Delete task'
+            onClick={(event) => deleteTask(event)}
+          />
         </div>
       ))}
     </section>

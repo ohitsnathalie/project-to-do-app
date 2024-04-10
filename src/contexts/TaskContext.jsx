@@ -1,6 +1,6 @@
-import React, { createContext, useState, useContext } from 'react';
-import moment from 'moment';
-const TaskListContext = createContext();
+import React, { createContext, useState, useContext } from "react"
+import moment from "moment"
+const TaskListContext = createContext()
 
 const TaskListProvider = ({ children }) => {
   const [taskList, setTaskList] = useState([
@@ -15,21 +15,19 @@ const TaskListProvider = ({ children }) => {
       importance: 1,
       visible: true,
     },
-  ]);
+  ])
 
   const addTask = (newTask) => {
-    setTaskList([...taskList, newTask]);
-    console.log(taskList);
-  };
-
+    setTaskList([...taskList, newTask])
+    console.log(taskList)
+  }
 
   return (
-    <TaskListContext.Provider value={{ taskList, addTask, setTaskList}}>
+    <TaskListContext.Provider value={{ taskList, addTask, setTaskList }}>
       {children}
     </TaskListContext.Provider>
-  );
-};
+  )
+}
 
-
-export { TaskListContext, TaskListProvider };
+export { TaskListContext, TaskListProvider }
 export const useTask = () => useContext(TaskListContext)
