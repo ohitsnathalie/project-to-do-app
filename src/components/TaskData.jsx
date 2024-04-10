@@ -11,6 +11,7 @@ export const TaskList = () => {
   const handleCheckbox = (event) => {
     const updatedTaskList = taskList.map((task) => {
       if (task.id.toString() === event.target.id) {
+// if the task id is equal to the event target id, return the task with the status flipped
         return { ...task, status: !task.status };
       }
       return task;
@@ -21,6 +22,7 @@ export const TaskList = () => {
 
   const deleteTask = (event) => {
     const updatedTaskList = taskList.filter((task) => {
+      // if the task id is not equal to the event target id, keep it in the list
       return task.id.toString() !== event.target.id;
     });
 
@@ -37,8 +39,8 @@ export const TaskList = () => {
     <section className="todo">
       <h1>Task List ToDo</h1>
 
-      {taskList.map((task, index) => (
-        <div className="reminder" key={index}>
+      {taskList.map((task, id) => (
+        <div className="reminder" key={task.id}>
           <h2>{task.task}</h2>
           <input
             type="checkbox"
