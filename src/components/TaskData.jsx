@@ -33,8 +33,6 @@ export const TaskList = () => {
 
 
 
-
-
   return (
     <section className="todo">
       <h1>Task List ToDo</h1>
