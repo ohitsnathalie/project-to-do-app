@@ -1,3 +1,8 @@
+#root {
+  --sticky-note-color-y: rgb(245, 245, 86);
+  --sticky-note-color-p: rgb(255, 192, 203);
+}
+
 *,
 *::before,
 *::after {
@@ -9,9 +14,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,4 +27,14 @@ h2 {
 p {
   font-size: 1em;
   font-weight: normal;
+}
+
+@font-face {
+  font-family: Indie Flower;
+  src: url(./assets/IndieFlower-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/Montserrat-VariableFont_wght.ttf);
 }

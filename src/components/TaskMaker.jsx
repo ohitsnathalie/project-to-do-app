@@ -48,63 +48,65 @@ export const TaskMaker = () => {
   }
   console.log(taskList)
   return (
-    <>
-      <div className='taskwrapper'>
-        <section className='taskmaker'>
-          <h2>Add a new task</h2>
-          <form onSubmit={handleSubmit}>
-            <article>
-              <label>
-                Add new todo
-                <input
-                  type='text'
-                  name='task'
-                  value={newTask.task}
-                  onChange={handleChange}
-                />
-              </label>
-            </article>
+    <section className='taskmaker'>
+      <h2>Add a new task</h2>
+      <form
+        onSubmit={handleSubmit}
+        className='taskmaker-wrap'>
+        <article className='task-wrap'>
+          <label>
+            Add new to-do
+            <input
+              id='text-input'
+              type='text'
+              placeholder='Write your task here..'
+              name='task'
+              value={newTask.task}
+              onChange={handleChange}
+            />
+          </label>
+        </article>
 
-            <article>
-              {" "}
-              <label>
-                Add a topic for the task
-                <input
-                  type='text'
-                  name='topic'
-                  value={newTask.topic}
-                  onChange={handleChange}
-                />
-              </label>
-            </article>
-            <article>
-              <label>
-                Add a Project for the task
-                <input
-                  type='text'
-                  name='project'
-                  value={newTask.project}
-                  onChange={handleChange}
-                />
-              </label>
-            </article>
-            <article>
-              <label>
-                How important is this task?
-                <select
-                  name='importance'
-                  id='importance'>
-                  <option value='1'>Critical!</option>
-                  <option value='2'>Important</option>
-                  <option value='3'>Nice to have done</option>
-                  <option value='4'>Not really important at all</option>
-                </select>
-              </label>
-            </article>
-            <button type='submit'>Add Task</button>
-          </form>
-        </section>
-      </div>
-    </>
+        <article className='topic-wrap'>
+          {" "}
+          <label>
+            Add a topic for the task
+            <input
+              id='text-input'
+              type='text'
+              name='topic'
+              value={newTask.topic}
+              onChange={handleChange}
+            />
+          </label>
+        </article>
+        <article className='project-wrap'>
+          <label>
+            Add a Project for the task
+            <input
+              id='text-input'
+              type='text'
+              name='project'
+              value={newTask.project}
+              onChange={handleChange}
+            />
+          </label>
+        </article>
+        <article className='importance-wrap'>
+          <label>
+            How important is this task?
+            <select
+              name='importance'
+              id='importance'>
+              <option value='1'>Critical!</option>
+              <option value='2'>Important</option>
+              <option value='3'>Nice to have done</option>
+              <option value='4'>Not really important at all</option>
+            </select>
+          </label>
+        </article>
+        <button type='submit'>Add Task</button>
+      </form>
+    </section>
   )
 }

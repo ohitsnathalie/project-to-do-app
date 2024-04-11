@@ -21,10 +21,12 @@ export const TaskCounter = () => {
   return (
     <div className='taskcounter'>
       <h2>Task counter</h2>
-      <p>Tasks to do: {countTasks}</p>
-      <p>Tasks completed: {countCompletedTasks}</p>
-      <p>Total tasks: {countAllTasks}</p>
-      <p>Tasks completed today: {countTasksToday}</p>
+      <div className='counter-container'>
+        <p>Tasks to do: {countTasks}</p>
+        <p>Tasks completed: {countCompletedTasks}</p>
+        <p>Total tasks: {countAllTasks}</p>
+        <p>Tasks completed today: {countTasksToday}</p>
+      </div>
     </div>
   )
 }

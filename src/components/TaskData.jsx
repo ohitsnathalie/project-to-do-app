@@ -2,6 +2,7 @@ import { updateLocale } from "moment/moment"
 import { useTask } from "../contexts/TaskContext"
 import { useState } from "react"
 import "./TaskData.css"
+import Trash from "../assets/trash1.svg"
 
 export const TaskList = () => {
   const { taskList, newTask, setTaskList } = useTask()
@@ -36,21 +37,25 @@ export const TaskList = () => {
           className='todo-item'
           key={task.id}>
           <h2>{task.task}</h2>
+          <div className='todo-wrapper'>
+            <input
+              type='checkbox'
+              id={task.id}
+              name='status'
+              onChange={(event) => handleCheckbox(event)}
+            />
+            <label htmlFor='status'> Done</label>
+          </div>
+          <div className='details-container'>
+            <p>Created: {task.created}</p>
+            <p>Deadline: {task.deadline}</p>
+            <p>Topic: {task.topic}</p>
+            <p>Project: {task.project}</p>
+            <p>Importance: {task.importance}</p>
+            <p>Status: {task.status ? "Completed" : "Not completed"}</p>
+          </div>
           <input
-            type='checkbox'
-            id={task.id}
-            name='status'
-            onChange={(event) => handleCheckbox(event)}
-          />
-          <label htmlFor='status'>Done</label>
-
-          <p>Created: {task.created}</p>
-          <p>Deadline: {task.deadline}</p>
-          <p>Topic: {task.topic}</p>
-          <p>Project: {task.project}</p>
-          <p>Importance: {task.importance}</p>
-          <p>Status: {task.status ? "Completed" : "Not completed"}</p>
-          <input
+            className='delete-btn'
             type='button'
             id={task.id}
             name='visible'
