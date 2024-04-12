@@ -34,6 +34,10 @@ details[open] > summary {
   border-color: #f9f9f9;
 }
 
+input[type="text"] {
+  font-family: "Montserrat";
+}
+
 select#importance {
   border-radius: 5px;
   height: 2rem;
@@ -48,6 +52,7 @@ select#importance {
   cursor: pointer;
   margin-top: 10px;
   box-shadow: 0 0 5px var(--background-color-grey);
+  font-family: "Montserrat";
 }
 
 .submit-btn:hover {
