@@ -56,6 +56,7 @@ export const TaskMaker = () => {
         <article className='task-wrap'>
           <label>
             Add new to-do<span>* </span>
+            <br />
             <input
               id='text-input'
               type='text'
@@ -71,7 +72,7 @@ export const TaskMaker = () => {
           <summary>More settings</summary>
           <article className='topic-wrap'>
             <label>
-              Add a topic for the task{" "}
+              Add a topic for the task <br />
               <input
                 id='text-input'
                 type='text'
@@ -84,7 +85,7 @@ export const TaskMaker = () => {
 
           <article className='project-wrap'>
             <label>
-              Add a Project for the task{" "}
+              Add a Project for the task <br />
               <input
                 id='text-input'
                 type='text'
@@ -98,6 +99,7 @@ export const TaskMaker = () => {
         <article className='importance-wrap'>
           <label>
             How important is this task?<span>* </span>
+            <br />
             <select
               name='importance'
               id='importance'>

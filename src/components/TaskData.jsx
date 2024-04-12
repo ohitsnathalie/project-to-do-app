@@ -2,7 +2,6 @@ import { updateLocale } from "moment/moment"
 import { useTask } from "../contexts/TaskContext"
 import { useState } from "react"
 import "./TaskData.css"
-import Trash from "../assets/trash1.svg"
 
 export const TaskList = () => {
   const { taskList, newTask, setTaskList } = useTask()
@@ -29,41 +28,76 @@ export const TaskList = () => {
   }
 
   return (
-    <section className='todo'>
-      <h1>Task List ToDo</h1>
+    <section className='tasklist-container'>
+      <div className='todo'>
+        {taskList.map((task, id) => (
+          <div
+            className='todo-item'
+            key={task.id}>
+            <div className='todo-wrapper'>
+              <input
+                type='checkbox'
+                id={task.id}
+                name='status'
+                onChange={(event) => handleCheckbox(event)}
+              />
+              <label htmlFor='status'>
+                {" "}
+                <h2 className='task-name'>{task.task}</h2>
+              </label>
+            </div>
 
-      {taskList.map((task, id) => (
-        <div
-          className='todo-item'
-          key={task.id}>
-          <h2>{task.task}</h2>
-          <div className='todo-wrapper'>
-            <input
-              type='checkbox'
+            <div className='details-container'>
+              <p
+                id='detail-titles'
+                className='created'>
+                <span>Created: </span>
+                {task.created}
+              </p>
+              <details className='more-details-wrapper'>
+                <summary>More details</summary>
+                <p
+                  id='detail-titles'
+                  className='deadline'>
+                  <span>Deadline: </span>
+                  {task.deadline}
+                </p>
+                <p
+                  id='detail-titles'
+                  className='topic'>
+                  <span>Topic: </span>
+                  {task.topic}
+                </p>
+                <p
+                  id='detail-titles'
+                  className='project'>
+                  <span>Project: </span>
+                  {task.project}
+                </p>
+              </details>
+              <p
+                id='detail-titles'
+                className=''>
+                <span>Importance: </span>
+                {task.importance}
+              </p>
+              <p
+                id='detail-titles'
+                className='status'>
+                <span>Status: </span>
+                {task.status ? "Completed" : "Not completed"}
+              </p>
+            </div>
+            <button
+              className='delete-btn'
               id={task.id}
-              name='status'
-              onChange={(event) => handleCheckbox(event)}
-            />
-            <label htmlFor='status'> Done</label>
+              name='visible'
+              onClick={(event) => deleteTask(event)}>
+              🗑️
+            </button>
           </div>
-          <div className='details-container'>
-            <p>Created: {task.created}</p>
-            <p>Deadline: {task.deadline}</p>
-            <p>Topic: {task.topic}</p>
-            <p>Project: {task.project}</p>
-            <p>Importance: {task.importance}</p>
-            <p>Status: {task.status ? "Completed" : "Not completed"}</p>
-          </div>
-          <input
-            className='delete-btn'
-            type='button'
-            id={task.id}
-            name='visible'
-            value='Delete task'
-            onClick={(event) => deleteTask(event)}
-          />
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   )
 }

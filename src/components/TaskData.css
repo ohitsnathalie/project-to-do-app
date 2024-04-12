@@ -1,8 +1,4 @@
-.todo {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+.tasklist-container {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -10,33 +6,103 @@
   box-shadow: 0 0 5px #ccc;
 }
 
+.todo {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
 .todo-item {
   display: flex;
   flex-flow: column wrap;
+  width: 270px;
+  height: auto;
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
-  background-color: var(--sticky-note-color-y);
+  background-color: var(--sticky-note-color-p);
   box-shadow: 0 0 5px #ccc;
   font-family: "Indie Flower";
+}
+
+.task-name {
+  font-size: 1.5rem;
+}
+
+#detail-titles span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.more-details-wrapper > summary {
+  list-style-type: "▶️ ";
+}
+
+.more-details-wrapper[open] > summary {
+  list-style-type: "🔽 ";
+}
+
+.created {
+  font-style: italic;
 }
 
 .delete-btn {
   margin: 0.5rem 0;
   height: 2rem;
-  width: auto;
-  background-color: var(--sticky-note-color-y);
+  width: 2rem;
+  background-color: var(--sticky-note-color-p);
+  border: none;
+  text-align: left;
 }
 
 .delete-btn:hover {
   cursor: pointer;
 }
 
-.details-container {
-}
-
 /* CHECKBOX STYLING */
 .todo-wrapper {
   margin: 0.6rem 0;
   font-size: 1.2rem;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #ececec;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+input[type="checkbox"]::after {
+  content: "✔";
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #5bcd3e;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+@media all and (min-width: 668px) {
+  .todo {
+    flex-flow: row wrap;
+  }
+}
+
+@media all and (min-width: 1028px) {
 }

@@ -1,5 +1,6 @@
 .taskcounter {
   padding: 1rem;
+  color: #f9f9f9;
 }
 
 .counter-container {
@@ -8,4 +9,15 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+}
+
+.do-complete {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.total-task {
+  margin-bottom: 1.5rem;
 }

@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   padding: 10px;
+  margin: 2rem 0;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
   box-shadow: 0 0 5px #ccc;
@@ -27,26 +28,23 @@ details[open] > summary {
 }
 
 #text-input {
-  height: 1.5rem;
+  height: 2rem;
   width: 18rem;
+  border-radius: 5px;
+  border-color: #f9f9f9;
 }
 
-/* .taskmaker article {
-  display: flex;
-  flex-flow: column wrap;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+select#importance {
   border-radius: 5px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 5px #ccc;
-} */
+  height: 2rem;
+  width: 18rem;
+}
 
 button {
   padding: 5px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #edebeb;
   cursor: pointer;
   margin-top: 10px;
 }

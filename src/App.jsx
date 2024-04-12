@@ -6,10 +6,13 @@ import { TaskCounter } from "./components/TaskCounter.jsx"
 
 export const App = () => {
   return (
-    <TaskListProvider>
-      <TaskList />
-      <TaskCounter />
-      <TaskMaker />
-    </TaskListProvider>
+    <div className='todo-app'>
+      <h1>Task Master</h1>
+      <TaskListProvider>
+        <TaskMaker />
+        <TaskList />
+        <TaskCounter />
+      </TaskListProvider>
+    </div>
   )
 }

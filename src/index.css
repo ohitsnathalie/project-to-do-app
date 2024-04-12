@@ -1,11 +1,10 @@
 #root {
   --sticky-note-color-y: rgb(245, 245, 86);
   --sticky-note-color-p: rgb(255, 192, 203);
+  --background-color: #274c43;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -15,8 +14,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+.todo-app {
+  background-color: var(--background-color);
+}
+
+h1 {
+  color: #f9f9f9;
+  margin: 2rem 1rem;
+  text-align: center;
 }
 
 h2 {
@@ -37,4 +44,17 @@ p {
 @font-face {
   font-family: Montserrat;
   src: url(./assets/Montserrat-VariableFont_wght.ttf);
+}
+
+@media all and (min-width: 668px) {
+  .todo-app {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (min-width: 1028px) {
+  .todo-app {
+    display: grid;
+  }
 }
