@@ -55,11 +55,11 @@ export const TaskMaker = () => {
         className='taskmaker-wrap'>
         <article className='task-wrap'>
           <label>
-            Add new to-do
+            Add new to-do<span>* </span>
             <input
               id='text-input'
               type='text'
-              placeholder='Write your task here..'
+              placeholder='What has to get done?'
               name='task'
               value={newTask.task}
               onChange={handleChange}
@@ -67,41 +67,44 @@ export const TaskMaker = () => {
           </label>
         </article>
 
-        <article className='topic-wrap'>
-          {" "}
-          <label>
-            Add a topic for the task
-            <input
-              id='text-input'
-              type='text'
-              name='topic'
-              value={newTask.topic}
-              onChange={handleChange}
-            />
-          </label>
-        </article>
-        <article className='project-wrap'>
-          <label>
-            Add a Project for the task
-            <input
-              id='text-input'
-              type='text'
-              name='project'
-              value={newTask.project}
-              onChange={handleChange}
-            />
-          </label>
-        </article>
+        <details>
+          <summary>More settings</summary>
+          <article className='topic-wrap'>
+            <label>
+              Add a topic for the task{" "}
+              <input
+                id='text-input'
+                type='text'
+                name='topic'
+                value={newTask.topic}
+                onChange={handleChange}
+              />
+            </label>
+          </article>
+
+          <article className='project-wrap'>
+            <label>
+              Add a Project for the task{" "}
+              <input
+                id='text-input'
+                type='text'
+                name='project'
+                value={newTask.project}
+                onChange={handleChange}
+              />
+            </label>
+          </article>
+        </details>
         <article className='importance-wrap'>
           <label>
-            How important is this task?
+            How important is this task?<span>* </span>
             <select
               name='importance'
               id='importance'>
-              <option value='1'>Critical!</option>
-              <option value='2'>Important</option>
-              <option value='3'>Nice to have done</option>
-              <option value='4'>Not really important at all</option>
+              <option value='1'>⚠️ Critical!</option>
+              <option value='2'>❗ Important</option>
+              <option value='3'>🔔 Nice to have done</option>
+              <option value='4'>📌 Not really important at all</option>
             </select>
           </label>
         </article>

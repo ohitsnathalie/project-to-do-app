@@ -1,0 +1,11 @@
+.taskcounter {
+  padding: 1rem;
+}
+
+.counter-container {
+  margin: 1rem 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
