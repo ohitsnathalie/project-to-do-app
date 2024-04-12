@@ -1,7 +1,12 @@
 #root {
   --sticky-note-color-y: rgb(245, 245, 86);
   --sticky-note-color-p: rgb(255, 192, 203);
-  --background-color: #274c43;
+  --background-color-green: #274c43;
+  --background-color-white: #f9f9f9;
+  --background-color-grey: #b5b4b4;
+
+  --font-color-dark: #0f0f0f;
+  --font-color-light: #f9f9f9;
 }
 
 * {
@@ -14,15 +19,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
 }
 
 .todo-app {
-  background-color: var(--background-color);
+  background-color: var(--background-color-white);
 }
 
 h1 {
-  color: #f9f9f9;
-  margin: 2rem 1rem;
+  color: #0f0f0f;
+  padding: 1.7rem 1rem 0.8rem 1rem;
   text-align: center;
 }
 
@@ -49,12 +56,7 @@ p {
 @media all and (min-width: 668px) {
   .todo-app {
     display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-@media all and (min-width: 1028px) {
-  .todo-app {
-    display: grid;
+    flex-flow: column wrap;
+    align-items: center;
   }
 }

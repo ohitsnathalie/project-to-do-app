@@ -49,7 +49,7 @@ export const TaskMaker = () => {
   console.log(taskList)
   return (
     <section className='taskmaker'>
-      <h2>Add a new task</h2>
+      <h2>✏️ Add a new task</h2>
       <form
         onSubmit={handleSubmit}
         className='taskmaker-wrap'>
@@ -60,7 +60,7 @@ export const TaskMaker = () => {
             <input
               id='text-input'
               type='text'
-              placeholder='What has to get done?'
+              placeholder=' What has to get done?'
               name='task'
               value={newTask.task}
               onChange={handleChange}
@@ -110,7 +110,11 @@ export const TaskMaker = () => {
             </select>
           </label>
         </article>
-        <button type='submit'>Add Task</button>
+        <button
+          type='submit'
+          className='submit-btn'>
+          Add Task
+        </button>
       </form>
     </section>
   )

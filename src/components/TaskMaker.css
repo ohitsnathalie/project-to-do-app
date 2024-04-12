@@ -40,15 +40,26 @@ select#importance {
   width: 18rem;
 }
 
-button {
+.submit-btn {
   padding: 5px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #edebeb;
+  background-color: var(--background-color-white);
   cursor: pointer;
   margin-top: 10px;
+  box-shadow: 0 0 5px var(--background-color-grey);
 }
 
-button:hover {
+.submit-btn:hover {
   cursor: pointer;
+  background-color: #ccc;
+  box-shadow: 0 0 5px var(--background-color-grey);
+}
+
+@media all and (min-width: 668px) {
+  .taskmaker {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+  }
 }

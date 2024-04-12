@@ -43,7 +43,7 @@ export const TaskList = () => {
               />
               <label htmlFor='status'>
                 {" "}
-                <h2 className='task-name'>{task.task}</h2>
+                <h3 className='task-name'>{task.task}</h3>
               </label>
             </div>
 

@@ -1,9 +1,7 @@
 .tasklist-container {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 5px #ccc;
+  background-color: var(--background-color-white);
 }
 
 .todo {
@@ -49,10 +47,16 @@
 .delete-btn {
   margin: 0.5rem 0;
   height: 2rem;
-  width: 2rem;
+  width: 8rem;
   background-color: var(--sticky-note-color-p);
   border: none;
   text-align: left;
+  font-size: 1rem;
+}
+
+.delete-btn::after {
+  content: " delete";
+  font-family: "Indie Flower";
 }
 
 .delete-btn:hover {
@@ -91,7 +95,7 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:checked {
-  background-color: #5bcd3e;
+  background-color: #8ec780;
 }
 
 input[type="checkbox"]:checked::after {
