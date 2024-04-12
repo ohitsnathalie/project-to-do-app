@@ -1,6 +1,6 @@
 .taskcounter {
   padding: 1rem;
-  width: 100%;
+  width: 320px;
   color: var(--font-color-light);
   background-color: var(--background-color-green);
 }

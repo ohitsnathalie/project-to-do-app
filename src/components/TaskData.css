@@ -107,8 +107,18 @@ input[type="checkbox"]:checked::after {
 @media all and (min-width: 668px) {
   .todo {
     flex-flow: row wrap;
+    max-width: 600px;
+  }
+
+  .tasklist-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
 }
 
 @media all and (min-width: 1028px) {
+  .todo {
+    max-width: 1000px;
+  }
 }

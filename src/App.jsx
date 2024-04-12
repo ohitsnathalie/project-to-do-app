@@ -10,8 +10,8 @@ export const App = () => {
       <h1>Task Master</h1>
       <TaskListProvider>
         <TaskMaker />
-        <TaskList />
         <TaskCounter />
+        <TaskList />
       </TaskListProvider>
     </div>
   )
