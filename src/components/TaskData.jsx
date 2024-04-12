@@ -1,6 +1,4 @@
-import { updateLocale } from "moment/moment"
 import { useTask } from "../contexts/TaskContext"
-import { useState } from "react"
 import "./TaskData.css"
 
 export const TaskList = () => {

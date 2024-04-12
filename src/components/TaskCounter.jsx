@@ -3,9 +3,12 @@ import "./TaskCounter.css"
 
 export const TaskCounter = () => {
   const { taskList } = useTask()
+  // count the number of tasks that are not completed
+  //  const countTasks = taskList.filter((task) => task.status === false).length
 
-  const countTasks = taskList.filter((task) => task.status === false).length
-  console.log(countTasks)
+  //count the number of tasks that are completed
+  //  console.log(countTasks)
+  //count the number of all tasks
   const countCompletedTasks = taskList.filter(
     (task) => task.status === true
   ).length
@@ -17,9 +20,8 @@ export const TaskCounter = () => {
       <div className='counter-container'>
         <div className='do-complete'>
           <p className='total-task'>
-            {countTasks}/{countAllTasks}
+            {countCompletedTasks}/{countAllTasks} tasks{" "}
           </p>
-          <p>Completed so far: {countCompletedTasks}</p>
         </div>
       </div>
     </div>
