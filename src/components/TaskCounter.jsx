@@ -11,23 +11,17 @@ export const TaskCounter = () => {
   ).length
   const countAllTasks = taskList.length
 
-  //tasks completed today
-  const today = new Date()
-  const todayString = today.toDateString()
-  const countTasksToday = taskList.filter((task) =>
-    task.created.includes(todayString)
-  ).length
 
   return (
     <div className='taskcounter'>
-      <h2>Task counter</h2>
+      <h2>Tasks to be done</h2>
       <div className='counter-container'>
         <div className='do-complete'>
-          <p>To do: {countTasks}</p>
-          <p>Completed: {countCompletedTasks}</p>
+        <p className='total-task'>{countTasks}/{countAllTasks}</p>
+          <p>Completed so far: {countCompletedTasks}</p>
         </div>
-        <p className='total-task'>Total tasks: {countAllTasks}</p>
-        <p>Tasks completed today: {countTasksToday}</p>
+
+
       </div>
     </div>
   )
