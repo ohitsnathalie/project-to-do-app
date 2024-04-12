@@ -27,7 +27,6 @@ export const TaskCounter = () => {
           <p>Completed: {countCompletedTasks}</p>
         </div>
         <p className='total-task'>Total tasks: {countAllTasks}</p>
-        <p>Tasks completed today: {countTasksToday}</p>
       </div>
     </div>
   )
