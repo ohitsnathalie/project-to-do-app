@@ -89,7 +89,10 @@ select#importance {
   background-color: var(--sticky-note-color-p);
   box-shadow: 0 0 5px var(--sticky-note-color-p);
 }
-
+details>summary {
+  display:flex;
+  max-width: 300px;
+}
 
 @media all and (min-width: 668px) {
   .taskmaker {
@@ -125,7 +128,6 @@ select#importance {
   }
 
   details>summary:before {
-
     background-image: url(../assets/arrow.svg);
     background-repeat: no-repeat;
     background-position: 90%;
@@ -134,7 +136,6 @@ select#importance {
   }
 
   details[open]>summary:before {
-
     background-image: url(../assets/arrow-up.svg);
     background-repeat: no-repeat;
     background-position: 90%;
