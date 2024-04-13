@@ -79,16 +79,5 @@ select#importance {
     border-radius: 5px;
   }
 
-  .taskmaker {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-    margin: 2rem 0;
-    border: 1px solid var(  --sticky-note-color-p);
-    background-color: var(--background-color-white);
-    box-shadow: 0 0 5px var(  --sticky-note-color-p);
-  }
+
 }
