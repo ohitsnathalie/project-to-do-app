@@ -14,7 +14,7 @@ export const TaskMaker = () => {
     deadline: moment().add(1, "days").calendar(), // this 24 h from now
     topic: "",
     project: "",
-    importance: 2,
+    importance: "",
     visible: true,
   })
 
@@ -38,7 +38,7 @@ export const TaskMaker = () => {
         deadline: moment().add(1, "days").calendar(),
         topic: "",
         project: "",
-        importance: 2,
+        importance: "",
         visible: true,
       })
       console.log(taskList)
@@ -114,15 +114,18 @@ export const TaskMaker = () => {
             How important is this task?<span>* </span>
             <br />
             <select
-              name='importance'
-              id='importance'>
-              <option value='1'>⚠️ Critical!</option>
-              <option value='2'>❗ Important</option>
-              <option value='3'>🔔 Nice to have done</option>
-              <option value='4'>📌 Not really important at all</option>
-            </select>
-          </label>
-        </article>
+          name='importance'
+          id='importance'
+          value={newTask.importance}
+          onChange={handleChange}
+        >
+          <option value='1'>⚠️ Critical!</option>
+          <option value='2'>❗ Important</option>
+          <option value='3'>🔔 Nice to have done</option>
+          <option value='4'>📌 Not really important at all</option>
+        </select>
+      </label>
+    </article>
         <button
           type='submit'
           className='submit-btn'>
