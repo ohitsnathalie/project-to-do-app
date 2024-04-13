@@ -11,6 +11,8 @@
   box-shadow: 0 0 5px var(--sticky-note-color-p);
 }
 
+
+
 form,
 article {
   margin: 1rem 0;
@@ -34,7 +36,7 @@ details[open] > summary {
 #text-input {
   all: unset;
   height: 2rem;
-  width: 16rem;
+  max-width: 15.4rem;
   border-radius: 5px;
   border: 2px solid var(--sticky-note-color-p);
   margin-bottom: 10px;
@@ -51,7 +53,7 @@ select#importance {
   border: 2px solid var(--sticky-note-color-p);
   border-radius: 5px;
   height: 2rem;
-  width: 15.4rem;
+  max-width: 15.4rem;
   padding: 10px 0 0 10px;
 }
 
@@ -88,11 +90,11 @@ select#importance {
   #topic-input,
   #project-input,
   #text-input {
-    width: 18rem;
+    max-width: 18rem;
   }
 
   select#importance {
-    width: 17.38rem;
+    max-width: 17.38rem;
   }
 }
 
@@ -145,7 +147,7 @@ details[open] > summary:before {
 #text-input {
   all:unset;
   height: 2rem;
-  width: 18rem;
+  max-width: 18rem;
   border-radius: 5px;
   border:2px solid var(  --sticky-note-color-p);
   margin-bottom: 10px;
@@ -171,7 +173,7 @@ select#importance {
   border:2px solid var(  --sticky-note-color-p);
   border-radius: 5px;
   height: 2rem;
-  width: 18rem;
+  max-width: 18rem;
   padding:10px 0 0 10px;
 
 
@@ -211,6 +213,7 @@ select#importance {
 
 @media all and (min-width: 1028px) {
   .taskmaker {
-    margin:1.5rem 5vw;
+    margin:0rem 5vw 0rem;
   }
 
+}

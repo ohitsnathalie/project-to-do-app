@@ -10,8 +10,8 @@ h1 {
   color: var(--background-color-green) ;
   padding: 1rem 0 0 0;
   font-size: 1.3rem;
-  width: 40vw;
-  text-align: start;
+  width: 100vw;
+  text-align: center;
 }
 
 @media all and (min-width: 668px) {
@@ -21,6 +21,3 @@ h1 {
   }
 }
 
-@media all and (min-width: 1028px) {
-
-}
