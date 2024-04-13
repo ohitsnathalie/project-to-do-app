@@ -152,10 +152,6 @@ input[type="checkbox"]:checked::after {
   }
 
   .todo-wrapper {
-    margin: 0.6rem 0;
-    font-size: 1.2rem;
-    display: flex;
-    gap: 0.7rem;
     align-items: flex-start;
   }
 }
