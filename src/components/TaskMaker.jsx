@@ -60,7 +60,7 @@ export const TaskMaker = () => {
             <input
               id='text-input'
               type='text'
-              placeholder=' What has to get done?'
+              placeholder=' What do you need to do?'
               name='task'
               value={newTask.task}
               onChange={handleChange}
