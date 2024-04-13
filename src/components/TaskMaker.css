@@ -19,7 +19,7 @@ article {
   justify-content: center;
 }
 
-details > summary,
+details>summary,
 #date-input,
 #task-input,
 #topic-input,
@@ -34,44 +34,44 @@ details > summary,
   margin-top: 5px;
 }
 
-details > summary {
+details>summary {
   width: 15.4rem;
   background-image: url(../assets/arrow.svg);
   background-repeat: no-repeat;
-  background-position:95%;
+  background-position: 95%;
   background-size: 15px;
-  padding:0.5rem 0.1rem 0rem;
+  padding: 0.5rem 0.1rem 0rem;
 }
 
-details[open] > summary {
+details[open]>summary {
   background-image: url(../assets/arrow-up.svg);
   background-repeat: no-repeat;
-  background-position:95%;
+  background-position: 95%;
   background-size: 15px;
 }
 
 input[type="text"] {
   border: 2px solid var(--sticky-note-color-p);
-  padding:0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   font-family: "Montserrat";
 }
 
-select{
+select {
   all: unset;
 }
 
 select#importance {
-  all:unset;
+  all: unset;
   border: 2px solid var(--sticky-note-color-p);
   border-radius: 5px;
   height: 2rem;
   max-width: 15.4rem;
-  padding:0.5rem 0.5rem 0rem;
+  padding: 0.5rem 0.5rem 0rem;
 }
 
 .submit-btn {
   all: unset;
-  padding:0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   background-color: var(--background-color-green);
   border: 2px solid var(--sticky-note-color-p);
   border-radius: 8px;
@@ -96,22 +96,22 @@ select#importance {
     width: 400px;
     height: auto;
     border-radius: 5px;
-    margin:0rem 5vw;
+    margin: 0rem 5vw;
   }
 
 
-    #date-input,
-    #task-input,
-    #topic-input,
-    #project-input,
-    select#importance,
-    #text-input {
-      width: 18rem;
-    }
+  #date-input,
+  #task-input,
+  #topic-input,
+  #project-input,
+  select#importance,
+  #text-input {
+    width: 18rem;
+  }
 
 
-  .taskmaker-wrap{
-    margin-top:0;
+  .taskmaker-wrap {
+    margin-top: 0;
   }
 
 
@@ -124,22 +124,21 @@ select#importance {
     justify-content: center;
   }
 
-  details > summary:before {
+  details>summary:before {
 
     background-image: url(../assets/arrow.svg);
     background-repeat: no-repeat;
-    background-position:90%;
+    background-position: 90%;
     background-size: 15px;
 
   }
 
-  details[open] > summary:before {
+  details[open]>summary:before {
 
     background-image: url(../assets/arrow-up.svg);
     background-repeat: no-repeat;
-    background-position:90%;
+    background-position: 90%;
     background-size: 15px;
   }
 
 }
-

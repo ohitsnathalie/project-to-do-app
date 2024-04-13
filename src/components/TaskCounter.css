@@ -2,8 +2,8 @@
   padding: 1rem 1.3rem 0 0;
   color: var(--font-color-dark);
   display: flex;
-justify-content: flex-end;
-  width:100vw;
+  justify-content: flex-end;
+  width: 100vw;
   text-align: end;
 
 }
@@ -18,12 +18,12 @@ justify-content: flex-end;
     display: flex;
     gap: 1rem;
     align-items: center;
-    width:56vw;
+    width: 56vw;
   }
 
   .total-task {
     font-size: 1.1rem;
-    margin:1rem 0 0.5rem 0;
+    margin: 1rem 0 0.5rem 0;
   }
 }
 
@@ -32,9 +32,10 @@ justify-content: flex-end;
     display: flex;
     gap: 1rem;
     align-items: center;
-    width:38vw;
+    width: 38vw;
     margin-right: 180px;
   }
+
   .total-task {
     margin-top: 0px;
   }

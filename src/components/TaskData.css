@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .todo-item {
   display: flex;
   flex-flow: column wrap;
@@ -39,10 +40,11 @@
 }
 
 .more-details-wrapper {
-font-size: 1rem;
+  font-size: 1rem;
   display: flex;
   font-weight: 600;
 }
+
 p#detail-titles {
   padding-top: 0.5rem;
 }
@@ -94,14 +96,14 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   height: 1.5rem;
   width: 1.5rem;
-  background-color:var(--background-color-white);
+  background-color: var(--background-color-white);
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   outline: none;
-  flex:none;
+  flex: none;
 }
 
 input[type="checkbox"]::after {
