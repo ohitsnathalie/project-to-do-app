@@ -1,4 +1,5 @@
 import { useTask } from "../contexts/TaskContext"
+import moment from "moment"
 import "./TaskData.css"
 
 export const TaskList = () => {
@@ -22,14 +23,13 @@ export const TaskList = () => {
       return task.id.toString() !== event.target.id
     })
 
-    setTaskList(updatedTaskList)
-
-
+    setTaskList(updatedTaskList);
 
 
   }
 
   return (
+
     <section className='tasklist-container'>
       <div className='todo'>
         {taskList.map((task, id) => (
@@ -61,7 +61,7 @@ export const TaskList = () => {
                   id='detail-titles'
                   className='deadline'>
                   <span>Deadline: </span>
-                  {task.deadline}
+                  {moment(task.deadline).format("MMMM Do YYYY, h:mm:ss a")}
                 </p>
                 <p
                   id='detail-titles'

@@ -71,6 +71,19 @@ export const TaskMaker = () => {
         <details>
           <summary>More settings</summary>
           <article className='topic-wrap'>
+
+
+            <label>
+              Add a deadline for the task <br />
+              <input
+                id='text-input'
+                type='datetime-local'
+                name='deadline'
+                value={newTask.deadline}
+                onChange={handleChange} />
+              </label>
+
+
             <label>
               Add a topic for the task <br />
               <input
