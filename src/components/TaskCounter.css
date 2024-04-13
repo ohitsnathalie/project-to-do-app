@@ -18,9 +18,8 @@ justify-content: flex-end;
     display: flex;
     gap: 1rem;
     align-items: center;
-    width:54vw;
+    width:56vw;
   }
-
 
   .total-task {
     font-size: 1.1rem;
@@ -33,7 +32,8 @@ justify-content: flex-end;
     display: flex;
     gap: 1rem;
     align-items: center;
-    width:35vw;
+    width:38vw;
+    margin-right: 180px;
   }
   .total-task {
     margin-top: 0px;

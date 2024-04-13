@@ -5,26 +5,28 @@ import "./TaskData.css"
 export const TaskList = () => {
   const { taskList, newTask, setTaskList } = useTask()
 
+  const deleteTask = (id) => {
+    const updatedTaskList = taskList.filter((task) => task.id !== id);
+
+    setTaskList(updatedTaskList);
+    localStorage.setItem('taskList', JSON.stringify(updatedTaskList));
+  }
+
+
   const handleCheckbox = (event) => {
     const updatedTaskList = taskList.map((task) => {
       if (task.id.toString() === event.target.id) {
         // if the task id is equal to the event target id, return the task with the status flipped
         return { ...task, status: !task.status }
       }
-      return task
+      return task;
     })
 
     setTaskList(updatedTaskList)
+    localStorage.setItem('taskList', JSON.stringify(updatedTaskList));
   }
 
-  const deleteTask = (event) => {
-    const updatedTaskList = taskList.filter((task) => {
-      // if the task id is not equal to the event target id, keep it in the list
-      return task.id.toString() !== event.target.id
-    })
 
-    setTaskList(updatedTaskList)
-  }
 
   return (
     <section className='tasklist-container'>
@@ -38,8 +40,9 @@ export const TaskList = () => {
               <input
                 type='checkbox'
                 id={task.id}
+                checked={task.status}
                 name='status'
-                onChange={(event) => handleCheckbox(event)}
+                onChange={handleCheckbox}
               />
               <label htmlFor='status'>
                 {" "}
@@ -59,7 +62,7 @@ export const TaskList = () => {
                   id='detail-titles'
                   className='deadline'>
                   <span>Deadline: </span>
-                
+
                   {moment(task.deadline).format("MMMM Do YYYY, hh:mm a ")}
                 </p>
                 <p
@@ -91,7 +94,7 @@ export const TaskList = () => {
               className='delete-btn'
               id={task.id}
               name='visible'
-              onClick={(event) => deleteTask(event)}>
+              onClick={(event) => deleteTask(task.id)}>
               🗑️
             </button>
           </div>
