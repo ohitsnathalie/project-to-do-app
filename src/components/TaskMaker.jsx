@@ -5,7 +5,6 @@ import "./TaskMaker.css"
 
 export const TaskMaker = () => {
   const { taskList, addTask } = useTask()
-  //console.log(taskList)
   const [newTask, setNewTask] = useState({
     id: Math.floor(Math.random() * 10000000000000),
     task: "",
@@ -23,7 +22,6 @@ export const TaskMaker = () => {
       ...newTask,
       [event.target.name]: event.target.value,
     })
-    console.log(taskList)
   }
 
   const handleSubmit = (event) => {
@@ -41,12 +39,10 @@ export const TaskMaker = () => {
         importance: "",
         visible: true,
       })
-      console.log(taskList)
     } else {
       alert("Please fill in at least a task")
     }
   }
-  console.log(taskList)
   return (
     <section className='taskmaker'>
       <h2>✏️ Add a new task</h2>
@@ -70,9 +66,8 @@ export const TaskMaker = () => {
 
         <details>
           <summary>More settings</summary>
-          <article className='topic-wrap'>
 
-
+          <article className='deadline-wrap'>
             <label>
               Add a deadline for the task <br />
               <input
@@ -80,10 +75,12 @@ export const TaskMaker = () => {
                 type='datetime-local'
                 name='deadline'
                 value={newTask.deadline}
-                onChange={handleChange} />
-              </label>
+                onChange={handleChange}
+              />
+            </label>
+          </article>
 
-
+          <article className='topic-wrap'>
             <label>
               Add a topic for the task <br />
               <input
@@ -114,19 +111,18 @@ export const TaskMaker = () => {
             How important is this task?<span>* </span>
             <br />
             <select
-          name='importance'
-          id='importance'
-          value={newTask.importance}
-          onChange={handleChange}
-        >
-           <option value=''>Pick a value ▾</option>
-          <option value='1'>⚠️ Critical!</option>
-          <option value='2'>❗ Important</option>
-          <option value='3'>🔔 Nice to have done</option>
-          <option value='4'>📌 Not really important at all</option>
-        </select>
-      </label>
-    </article>
+              name='importance'
+              id='importance'
+              value={newTask.importance}
+              onChange={handleChange}>
+              <option value=''>Pick a value ▾</option>
+              <option value='1'>⚠️ Critical!</option>
+              <option value='2'>❗ Important</option>
+              <option value='3'>🔔 Nice to have done</option>
+              <option value='4'>📌 Not really important at all</option>
+            </select>
+          </label>
+        </article>
         <button
           type='submit'
           className='submit-btn'>
