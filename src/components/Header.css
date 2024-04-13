@@ -3,6 +3,7 @@
   height: auto;
   width: 100%;
   justify-content: space-around;
+  border-bottom: var(--sticky-note-color-p) solid 1px;
 }
 
 h1 {
@@ -10,6 +11,7 @@ h1 {
   padding: 1rem;
   font-size: 1.3rem;
   width: 8rem;
+  text-align: left;
 }
 
 @media all and (min-width: 668px) {
