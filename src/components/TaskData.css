@@ -8,7 +8,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .todo-item {
   display: flex;
@@ -17,52 +17,86 @@
   height: auto;
   margin: 10px;
   padding: 10px;
+  color:var( --font-color-dark);
   border: 1px solid #ccc;
-  background-color: var(--sticky-note-color-p);
+  background-color:var( --sticky-note-color-y);
   box-shadow: 0 0 5px #ccc;
-  font-family: "Indie Flower";
+font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .task-name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 #detail-titles span {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 
+
+.more-details-wrapper{
+  margin: 0.5rem 0;
+  padding:1rem 0;
+font-size: 1rem;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  font-weight: 600;
+
+}
+p#detail-titles  {
+ padding-top:0.5rem;
+}
+
+p#detail-titles.created  {
+  padding-top:0rem;
+ }
 .more-details-wrapper > summary {
-  list-style-type: "▶️ ";
+
+  list-style-image: url(../assets/arrow.svg);
+
 }
 
 .more-details-wrapper[open] > summary {
-  list-style-type: "▼ ";
+  list-style-image: url(../assets/arrow-up.svg);
+
 }
 
 .created {
   font-style: italic;
+  text-align:end;
+  font-size: 0.8rem;
+  padding:0 0.7rem 0.5rem 0;
 }
 
 .delete-btn {
-  margin: 0.5rem 0;
+  align-self: flex-end;
+  margin: 0.5rem 0.5rem;
   height: 2rem;
   width: 7rem;
-  background-color: var(--sticky-note-color-p);
+  color:#0C0A3E;
+  background-color:var( --sticky-note-color-y);
   border: none;
-  text-align: left;
+  text-align: end;
   font-size: 1rem;
 }
 
 .delete-btn::after {
-  content: " delete";
-  font-family: "Indie Flower";
+  content: " Delete";
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
 }
 
 .delete-btn:hover {
   cursor: pointer;
   font-size: 1.05rem;
   transition: 0.3s ease-in-out;
+  color:#273469;
 }
 
 /* CHECKBOX STYLING */
@@ -90,14 +124,14 @@ input[type="checkbox"] {
 
 input[type="checkbox"]::after {
   content: "✔";
-  color: whitesmoke;
+  color: #fafaff;
   font-weight: 500;
   font-size: 1.5rem;
   display: none;
 }
 
 input[type="checkbox"]:checked {
-  background-color: #8ec780;
+  background-color: var(--background-color-green);
 }
 
 input[type="checkbox"]:checked::after {

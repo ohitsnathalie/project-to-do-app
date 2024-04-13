@@ -1,11 +1,11 @@
 #root {
-  --sticky-note-color-y: rgb(245, 245, 86);
-  --sticky-note-color-p: rgb(255, 192, 203);
-  --background-color-green: #274c43;
-  --background-color-white: #f9f9f9;
-  --background-color-grey: #b5b4b4;
+  --sticky-note-color-y: #E4D9FF;
+  --sticky-note-color-p: #B5Bee3;
+  --background-color-green: #273469;
+  --background-color-white: #FAFAFF;
+  --background-color-grey: #1E2749;
 
-  --font-color-dark: #0f0f0f;
+  --font-color-dark: #30343F;
   --font-color-light: #f9f9f9;
 }
 
@@ -25,6 +25,12 @@ body {
 
 .todo-app {
   background-color: var(--background-color-white);
+}
+
+h1 {
+  color: var(--font-color-dark);
+  padding: 1.7rem 1rem 0.8rem 1rem;
+  text-align: center;
 }
 
 h2 {

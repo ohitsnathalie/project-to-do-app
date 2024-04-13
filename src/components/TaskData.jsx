@@ -23,6 +23,10 @@ export const TaskList = () => {
     })
 
     setTaskList(updatedTaskList)
+
+
+
+
   }
 
   return (
@@ -49,8 +53,7 @@ export const TaskList = () => {
               <p
                 id='detail-titles'
                 className='created'>
-                <span>Created: </span>
-                {task.created}
+                 {task.created}
               </p>
               <details className='more-details-wrapper'>
                 <summary>More details</summary>
@@ -76,14 +79,13 @@ export const TaskList = () => {
               <p
                 id='detail-titles'
                 className=''>
-                <span>Importance: </span>
+                <span>Priority: </span>
                 {task.importance}
               </p>
               <p
                 id='detail-titles'
                 className='status'>
-                <span>Status: </span>
-                {task.status ? "Completed" : "Not completed"}
+                {task.status ? "Finished" : "Not done yet"}
               </p>
             </div>
             <button

@@ -5,10 +5,10 @@
   align-items: center;
   width: 100%;
   padding: 10px;
-  margin: 1rem 0;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 5px #ccc;
+  margin: 2rem 0;
+  border: 1px solid var(  --sticky-note-color-p);
+  background-color: var(--background-color-white);
+  box-shadow: 0 0 5px var(  --sticky-note-color-p);
 }
 
 form,
@@ -20,19 +20,19 @@ article {
 }
 
 details > summary {
-  list-style-type: "▶️ ";
+  list-style-image: url(../assets/arrow.svg);
 }
 
 details[open] > summary {
-  list-style-type: "▼ ";
+  list-style-image: url(../assets/arrow-up.svg);
+
 }
 
 #text-input {
   height: 2rem;
   width: 18rem;
   border-radius: 5px;
-  border-color: #f9f9f9;
-  padding-left: 5px;
+  border-color: var(  --sticky-note-color-p);
 }
 
 input[type="text"] {
@@ -47,18 +47,20 @@ select#importance {
 
 .submit-btn {
   padding: 5px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(  --sticky-note-color-p);
   border-radius: 5px;
-  background-color: var(--background-color-white);
+  background-color:var(--background-color-green);
   cursor: pointer;
   margin-top: 10px;
-  box-shadow: 0 0 5px var(--background-color-grey);
+  box-shadow: 0 0 5px  var(  --sticky-note-color-p);
   font-family: "Montserrat";
+  color:var( --background-color-white);
 }
 
 .submit-btn:hover {
   cursor: pointer;
-  background-color: #ccc;
+  color: var(--background-color-grey);
+  background-color:  var(--sticky-note-color-p);
   box-shadow: 0 0 5px var(--background-color-grey);
 }
 
