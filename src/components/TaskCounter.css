@@ -1,25 +1,35 @@
 .taskcounter {
   padding: 1rem;
-  width: 320px;
-  color: var(--font-color-light);
-  background-color: var(--background-color-green);
+  color: var(--font-color-dark);
 }
 
-.counter-container {
-  margin: 1rem 0;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.do-complete {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  margin-bottom: 1rem;
+.taskcounter h2 {
+  font-size: 1rem;
+  margin: 0;
 }
 
 .total-task {
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media all and (min-width: 668px) {
+  .taskcounter h2 {
+    font-size: 1.2rem;
+  }
+
+  .total-task {
+    font-size: 1.1rem;
+  }
+}
+
+@media all and (min-width: 1028px) {
+  .taskcounter {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .total-task {
+    margin: 0;
+  }
 }

@@ -1,0 +1,20 @@
+.header-container {
+  display: flex;
+  height: auto;
+  width: 100%;
+  justify-content: space-around;
+}
+
+h1 {
+  color: #0f0f0f;
+  padding: 1rem;
+  font-size: 1.3rem;
+  width: 8rem;
+}
+
+@media all and (min-width: 668px) {
+  h1 {
+    font-size: 2rem;
+    width: auto;
+  }
+}
