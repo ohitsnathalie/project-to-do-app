@@ -18,9 +18,9 @@
   margin: 10px;
   padding: 10px;
   color:var( --font-color-dark);
-  border: 1px solid #ccc;
+  border: 1px solid var(  --sticky-note-color-p);;
   background-color:var( --sticky-note-color-y);
-  box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px var(  --sticky-note-color-p);;
 font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;

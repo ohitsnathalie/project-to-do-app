@@ -13,10 +13,12 @@
 
 form,
 article {
+
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 details > summary {
@@ -36,21 +38,27 @@ details[open] > summary {
 }
 
 input[type="text"] {
+  all: unset;
+  border:2px solid var(  --sticky-note-color-p);
   font-family: "Montserrat";
 }
 
 select#importance {
+  all: unset;
+  border:2px solid var(  --sticky-note-color-p);
   border-radius: 5px;
   height: 2rem;
   width: 18rem;
 }
 
 .submit-btn {
-  padding: 5px 10px;
-  border: 1px solid var(  --sticky-note-color-p);
-  border-radius: 5px;
+  all: unset;
+  padding: 7px 10px;
   background-color:var(--background-color-green);
+  border: 2px solid var(  --sticky-note-color-p);
+  border-radius: 8px;
   cursor: pointer;
+  text-align: center ;
   margin-top: 10px;
   box-shadow: 0 0 5px  var(  --sticky-note-color-p);
   font-family: "Montserrat";
@@ -61,7 +69,7 @@ select#importance {
   cursor: pointer;
   color: var(--background-color-grey);
   background-color:  var(--sticky-note-color-p);
-  box-shadow: 0 0 5px var(--background-color-grey);
+  box-shadow: 0 0 5px  var(  --sticky-note-color-p);
 }
 
 @media all and (min-width: 668px) {
