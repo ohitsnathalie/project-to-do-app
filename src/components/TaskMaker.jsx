@@ -119,6 +119,7 @@ export const TaskMaker = () => {
           value={newTask.importance}
           onChange={handleChange}
         >
+           <option value=''>Pick a value ▾</option>
           <option value='1'>⚠️ Critical!</option>
           <option value='2'>❗ Important</option>
           <option value='3'>🔔 Nice to have done</option>
