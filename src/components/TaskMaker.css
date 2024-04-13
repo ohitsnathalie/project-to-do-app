@@ -3,9 +3,9 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90vw;
   padding: 10px;
-  margin: 2rem 0;
+  margin: 2rem 5vw;
   border: 1px solid var(  --sticky-note-color-p);
   background-color: var(--background-color-white);
   box-shadow: 0 0 5px var(  --sticky-note-color-p);
@@ -77,5 +77,18 @@ select#importance {
     width: 400px;
     height: auto;
     border-radius: 5px;
+  }
+
+  .taskmaker {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin: 2rem 0;
+    border: 1px solid var(  --sticky-note-color-p);
+    background-color: var(--background-color-white);
+    box-shadow: 0 0 5px var(  --sticky-note-color-p);
   }
 }
