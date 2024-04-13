@@ -33,6 +33,7 @@ export const TaskList = () => {
     <section className='tasklist-container'>
       <div className='todo'>
         {taskList.map((task, id) => (
+
           <div
             className='todo-item'
             key={task.id}>
@@ -61,7 +62,8 @@ export const TaskList = () => {
                   id='detail-titles'
                   className='deadline'>
                   <span>Deadline: </span>
-                  {moment(task.deadline).format("MMMM Do YYYY, h:mm:ss a")}
+                
+                  {moment(task.deadline).format("MMMM Do YYYY, hh:mm a ")}
                 </p>
                 <p
                   id='detail-titles'

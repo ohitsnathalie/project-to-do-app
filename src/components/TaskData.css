@@ -26,6 +26,11 @@ font-family: "Montserrat", sans-serif;
   font-style: normal;
 }
 
+.article{
+  margin:0;
+  padding:0;
+}
+
 .task-name {
   font-size: 1.3rem;
   margin-top:-0.2rem;
@@ -40,7 +45,7 @@ font-family: "Montserrat", sans-serif;
 
 .more-details-wrapper{
   margin: 0.5rem 0;
-  padding:1rem 0;
+  padding:0.5rem 0;
 font-size: 1rem;
   display: flex;
   gap: 0.7rem;
@@ -55,15 +60,22 @@ p#detail-titles  {
 p#detail-titles.created  {
   padding-top:0rem;
  }
-.more-details-wrapper > summary {
+.more-details-wrapper > summary:before {
+  list-style-type:url(../assets/arrow-up.svg);
+  background-image: url(../assets/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-size: 15px;
 
-  list-style-image: url(../assets/arrow.svg);
 
 }
 
-.more-details-wrapper[open] > summary {
-  list-style-image: url(../assets/arrow-up.svg);
-
+.more-details-wrapper[open] > summary:before {
+  list-style-type:url(../assets/arrow-up.svg);
+  background-image: url(../assets/arrow-up.svg);
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-size: 15px;
 }
 
 .created {

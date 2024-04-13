@@ -5,13 +5,13 @@ import "./TaskMaker.css"
 
 export const TaskMaker = () => {
   const { taskList, addTask } = useTask()
-  //console.log(taskList)
+
   const [newTask, setNewTask] = useState({
     id: Math.floor(Math.random() * 10000000000000),
     task: "",
     status: false,
     created: moment().format("MMMM Do YYYY, h:mm:ss a"), //this is right now
-    deadline: moment().add(1, "days").calendar(), // this 24 h from now
+    deadline: "",
     topic: "",
     project: "",
     importance: "",
@@ -23,7 +23,7 @@ export const TaskMaker = () => {
       ...newTask,
       [event.target.name]: event.target.value,
     })
-    console.log(taskList)
+
   }
 
   const handleSubmit = (event) => {
@@ -34,19 +34,19 @@ export const TaskMaker = () => {
         id: Math.floor(Math.random() * 10000000000000),
         task: "",
         status: false,
-        created: moment().format("MMMM Do YYYY, h:mm:ss a"), //this is right now
-        deadline: moment().add(1, "days").calendar(),
+        created: moment().format("MMMM Do YYYY, h:mm a"), //this is right now
+        deadline:"April 10th 2024, 12:34 pm",
         topic: "",
         project: "",
         importance: "",
         visible: true,
       })
-      console.log(taskList)
+
     } else {
       alert("Please fill in at least a task")
     }
   }
-  console.log(taskList)
+
   return (
     <section className='taskmaker'>
       <h2>✏️ Add a new task</h2>

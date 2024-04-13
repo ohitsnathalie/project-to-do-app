@@ -9,7 +9,7 @@ const TaskListProvider = ({ children }) => {
       task: "Make a todolist app",
       status: false,
       created: moment().format("MMMM Do YYYY, h:mm:ss a"),
-      deadline: moment().add(5, "days").calendar(),
+      deadline: moment().format("MMMM Do YYYY, h:mm:ss a"),
       topic: "Web development",
       project: "Technigo",
       importance: 1,
@@ -19,7 +19,7 @@ const TaskListProvider = ({ children }) => {
 
   const addTask = (newTask) => {
     setTaskList([...taskList, newTask])
-    console.log(taskList)
+   
   }
 
   return (

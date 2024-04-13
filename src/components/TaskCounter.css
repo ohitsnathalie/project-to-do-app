@@ -1,25 +1,30 @@
 .taskcounter {
-  padding: 1rem;
+  padding: 1rem 1.3rem 0 0;
   color: var(--font-color-dark);
+  display: flex;
+justify-content: flex-end;
+  width:100vw;
+  text-align: end;
+
 }
 
-.taskcounter h2 {
-  font-size: 1rem;
-  margin: 0;
-}
 
 .total-task {
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  text-align: end;
 }
 
 @media all and (min-width: 668px) {
-  .taskcounter h2 {
-    font-size: 1.2rem;
+  .taskcounter {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width:54vw;
   }
+
 
   .total-task {
     font-size: 1.1rem;
+    margin:1rem 0 0.5rem 0;
   }
 }
 
@@ -28,8 +33,9 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    width:50vw;
   }
   .total-task {
-    margin: 0;
+    margin-top: -68px;
   }
 }
