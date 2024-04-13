@@ -58,7 +58,7 @@ export const TaskMaker = () => {
             Add new to-do<span>* </span>
             <br />
             <input
-              id='text-input'
+              id='task-input'
               type='text'
               placeholder=' What do you need to do?'
               name='task'
@@ -76,7 +76,7 @@ export const TaskMaker = () => {
             <label>
               Add a deadline for the task <br />
               <input
-                id='text-input'
+                id='date-input'
                 type='datetime-local'
                 name='deadline'
                 value={newTask.deadline}
@@ -87,7 +87,7 @@ export const TaskMaker = () => {
             <label>
               Add a topic for the task <br />
               <input
-                id='text-input'
+                id='topic-input'
                 type='text'
                 name='topic'
                 value={newTask.topic}
@@ -100,7 +100,7 @@ export const TaskMaker = () => {
             <label>
               Add a Project for the task <br />
               <input
-                id='text-input'
+                id='project-input'
                 type='text'
                 name='project'
                 value={newTask.project}
