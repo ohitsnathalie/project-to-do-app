@@ -13,7 +13,7 @@
   margin: 0.6rem 5vw;
   border: 1px solid var(  --sticky-note-color-p);
   background-color: var(--background-color-white);
-  box-shadow: 0 0 5px var(  --sticky-note-color-p);
+  box-shadow: 0 0 5px var(--sticky-note-color-p);
 }
 
 form,
@@ -40,19 +40,19 @@ details[open] > summary:before {
   background-position: 0%;
   background-size: 15px;
 }
+
 #date-input,
-#deadline-input,
 #task-input,
 #topic-input,
 #project-input,
 #text-input {
-  all:unset;
+  all: unset;
   height: 2rem;
-  width: 18rem;
+  width: 16rem;
   border-radius: 5px;
-  border:2px solid var(  --sticky-note-color-p);
+  border: 2px solid var(--sticky-note-color-p);
   margin-bottom: 10px;
-  margin-top:5px;
+  margin-top: 5px;
 }
 #date-input {
   padding: 0.5rem 0 0 0 ;
@@ -65,40 +65,38 @@ label{
 
 
 input[type="text"] {
-  border:2px solid var(  --sticky-note-color-p);
+  border: 2px solid var(--sticky-note-color-p);
   font-family: "Montserrat";
 }
 
 select#importance {
   all: unset;
-  border:2px solid var(  --sticky-note-color-p);
+  border: 2px solid var(--sticky-note-color-p);
   border-radius: 5px;
   height: 2rem;
-  width: 18rem;
-  padding:10px 0 0 10px;
-
-
+  width: 15.4rem;
+  padding: 10px 0 0 10px;
 }
 
 .submit-btn {
   all: unset;
   padding: 7px 10px;
-  background-color:var(--background-color-green);
-  border: 2px solid var(  --sticky-note-color-p);
+  background-color: var(--background-color-green);
+  border: 2px solid var(--sticky-note-color-p);
   border-radius: 8px;
   cursor: pointer;
-  text-align: center ;
+  text-align: center;
   margin-top: 10px;
-  box-shadow: 0 0 5px  var(  --sticky-note-color-p);
+  box-shadow: 0 0 5px var(--sticky-note-color-p);
   font-family: "Montserrat";
-  color:var( --background-color-white);
+  color: var(--background-color-white);
 }
 
 .submit-btn:hover {
   cursor: pointer;
   color: var(--background-color-grey);
-  background-color:  var(--sticky-note-color-p);
-  box-shadow: 0 0 5px  var(  --sticky-note-color-p);
+  background-color: var(--sticky-note-color-p);
+  box-shadow: 0 0 5px var(--sticky-note-color-p);
 }
 
 @media all and (min-width: 668px) {
@@ -106,10 +104,19 @@ select#importance {
     width: 400px;
     height: auto;
     border-radius: 5px;
-    margin:0rem 5vw;
   }
 
+  #date-input,
+  #task-input,
+  #topic-input,
+  #project-input,
+  #text-input {
+    width: 18rem;
+  }
 
+  select#importance {
+    width: 17.38rem;
+  }
 }
 
 @media all and (min-width: 1028px) {

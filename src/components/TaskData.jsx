@@ -23,13 +23,10 @@ export const TaskList = () => {
       return task.id.toString() !== event.target.id
     })
 
-    setTaskList(updatedTaskList);
-
-
+    setTaskList(updatedTaskList)
   }
 
   return (
-
     <section className='tasklist-container'>
       <div className='todo'>
         {taskList.map((task, id) => (
@@ -54,7 +51,7 @@ export const TaskList = () => {
               <p
                 id='detail-titles'
                 className='created'>
-                 {task.created}
+                {task.created}
               </p>
               <details className='more-details-wrapper'>
                 <summary>More details</summary>

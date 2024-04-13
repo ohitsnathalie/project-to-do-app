@@ -70,9 +70,8 @@ export const TaskMaker = () => {
 
         <details>
           <summary>More settings</summary>
-          <article className='topic-wrap'>
 
-
+          <article className='deadline-wrap'>
             <label>
               Add a deadline for the task <br />
               <input
@@ -80,10 +79,12 @@ export const TaskMaker = () => {
                 type='datetime-local'
                 name='deadline'
                 value={newTask.deadline}
-                onChange={handleChange} />
-              </label>
+                onChange={handleChange}
+              />
+            </label>
+          </article>
 
-
+          <article className='topic-wrap'>
             <label>
               Add a topic for the task <br />
               <input
@@ -114,19 +115,18 @@ export const TaskMaker = () => {
             How important is this task?<span>* </span>
             <br />
             <select
-          name='importance'
-          id='importance'
-          value={newTask.importance}
-          onChange={handleChange}
-        >
-           <option value=''>Pick a value ▾</option>
-          <option value='1'>⚠️ Critical!</option>
-          <option value='2'>❗ Important</option>
-          <option value='3'>🔔 Nice to have done</option>
-          <option value='4'>📌 Not really important at all</option>
-        </select>
-      </label>
-    </article>
+              name='importance'
+              id='importance'
+              value={newTask.importance}
+              onChange={handleChange}>
+              <option value=''>Pick a value ▾</option>
+              <option value='1'>⚠️ Critical!</option>
+              <option value='2'>❗ Important</option>
+              <option value='3'>🔔 Nice to have done</option>
+              <option value='4'>📌 Not really important at all</option>
+            </select>
+          </label>
+        </article>
         <button
           type='submit'
           className='submit-btn'>
