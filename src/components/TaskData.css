@@ -150,6 +150,14 @@ input[type="checkbox"]:checked::after {
     justify-content: center;
     margin-bottom: 2rem;
   }
+
+  .todo-wrapper {
+    margin: 0.6rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+  }
 }
 
 @media all and (min-width: 1028px) {
