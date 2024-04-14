@@ -27,7 +27,6 @@
   font-style: normal;
 }
 
-
 .task-name {
   font-size: 1.3rem;
   margin-top: 0rem;
@@ -140,6 +139,10 @@ input[type="checkbox"]:checked::after {
 
   .todo-wrapper {
     align-items: flex-start;
+  }
+
+  .note-summary {
+    width: 17.2rem;
   }
 }
 
