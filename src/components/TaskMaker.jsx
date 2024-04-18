@@ -23,7 +23,6 @@ export const TaskMaker = () => {
       ...newTask,
       [event.target.name]: event.target.value,
     })
-
   }
 
   const handleSubmit = (event) => {
@@ -35,13 +34,12 @@ export const TaskMaker = () => {
         task: "",
         status: false,
         created: moment().format("MMMM Do YYYY, h:mm a"), //this is right now
-        deadline:"April 10th 2024, 12:34 pm",
+        deadline: "April 10th 2024, 12:34 pm",
         topic: "",
         project: "",
         importance: "",
         visible: true,
       })
-
     } else {
       alert("Please fill in at least a task")
     }

@@ -5,9 +5,7 @@
   justify-content: flex-end;
   width: 100vw;
   text-align: end;
-
 }
-
 
 .total-task {
   text-align: end;
@@ -15,10 +13,8 @@
 
 @media all and (min-width: 668px) {
   .taskcounter {
-    display: flex;
-    gap: 1rem;
     align-items: center;
-    width: 56vw;
+    width: 66vw;
   }
 
   .total-task {
@@ -32,11 +28,11 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    width: 38vw;
+    width: 36vw;
     margin-right: 180px;
   }
 
   .total-task {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }

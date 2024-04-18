@@ -6,12 +6,11 @@ export const TaskList = () => {
   const { taskList, newTask, setTaskList } = useTask()
 
   const deleteTask = (id) => {
-    const updatedTaskList = taskList.filter((task) => task.id !== id);
+    const updatedTaskList = taskList.filter((task) => task.id !== id)
 
-    setTaskList(updatedTaskList);
-    localStorage.setItem('taskList', JSON.stringify(updatedTaskList));
+    setTaskList(updatedTaskList)
+    localStorage.setItem("taskList", JSON.stringify(updatedTaskList))
   }
-
 
   const handleCheckbox = (event) => {
     const updatedTaskList = taskList.map((task) => {
@@ -19,20 +18,17 @@ export const TaskList = () => {
         // if the task id is equal to the event target id, return the task with the status flipped
         return { ...task, status: !task.status }
       }
-      return task;
+      return task
     })
 
     setTaskList(updatedTaskList)
-    localStorage.setItem('taskList', JSON.stringify(updatedTaskList));
+    localStorage.setItem("taskList", JSON.stringify(updatedTaskList))
   }
-
-
 
   return (
     <section className='tasklist-container'>
       <div className='todo'>
         {taskList.map((task, id) => (
-
           <div
             className='todo-item'
             key={task.id}>
@@ -57,7 +53,7 @@ export const TaskList = () => {
                 {task.created}
               </p>
               <details className='more-details-wrapper'>
-                <summary>More details</summary>
+                <summary className='note-summary'>More details</summary>
                 <p
                   id='detail-titles'
                   className='deadline'>

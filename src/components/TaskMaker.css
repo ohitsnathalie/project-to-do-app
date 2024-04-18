@@ -11,7 +11,6 @@
   box-shadow: 0 0 5px var(--sticky-note-color-p);
 }
 
-
 form,
 article {
   display: flex;
@@ -19,12 +18,11 @@ article {
   justify-content: center;
 }
 
-details>summary,
+details > summary,
 #date-input,
 #task-input,
 #topic-input,
-#project-input,
-#text-input {
+#project-input {
   all: unset;
   height: 2rem;
   width: 15.4rem;
@@ -34,16 +32,16 @@ details>summary,
   margin-top: 5px;
 }
 
-details>summary {
-  width: 15.4rem;
+details > summary {
+  width: 14.9rem;
   background-image: url(../assets/arrow.svg);
   background-repeat: no-repeat;
   background-position: 95%;
   background-size: 15px;
-  padding: 0.5rem 0.1rem 0rem;
+  padding: 0.5rem 0 0 0.5rem;
 }
 
-details[open]>summary {
+details[open] > summary {
   background-image: url(../assets/arrow-up.svg);
   background-repeat: no-repeat;
   background-position: 95%;
@@ -65,8 +63,8 @@ select#importance {
   border: 2px solid var(--sticky-note-color-p);
   border-radius: 5px;
   height: 2rem;
-  max-width: 15.4rem;
-  padding: 0.5rem 0.5rem 0rem;
+  width: 14.9rem;
+  padding: 0.5rem 0 0 0.5rem;
 }
 
 .submit-btn {
@@ -89,8 +87,8 @@ select#importance {
   background-color: var(--sticky-note-color-p);
   box-shadow: 0 0 5px var(--sticky-note-color-p);
 }
-details>summary {
-  display:flex;
+details > summary {
+  display: flex;
   max-width: 300px;
 }
 
@@ -102,22 +100,20 @@ details>summary {
     margin: 0rem 5vw;
   }
 
-
   #date-input,
   #task-input,
   #topic-input,
-  #project-input,
-  select#importance,
-  #text-input {
-    width: 18rem;
+  #project-input {
+    width: 18.5rem;
   }
 
+  select#importance {
+    width: 18rem;
+  }
 
   .taskmaker-wrap {
     margin-top: 0;
   }
-
-
 
   form,
   article {
@@ -127,19 +123,21 @@ details>summary {
     justify-content: center;
   }
 
-  details>summary:before {
+  details > summary {
+    width: 18rem;
+  }
+
+  details > summary:before {
     background-image: url(../assets/arrow.svg);
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: 15px;
-
   }
 
-  details[open]>summary:before {
+  details[open] > summary:before {
     background-image: url(../assets/arrow-up.svg);
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: 15px;
   }
-
 }
